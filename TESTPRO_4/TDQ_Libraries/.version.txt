@@ -1,2 +1,0 @@
-#Tue Jul 25 17:44:00 CST 2017
-version=6.5.0
