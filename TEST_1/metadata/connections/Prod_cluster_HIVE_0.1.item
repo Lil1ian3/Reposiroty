@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:DatabaseConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_28JDkGJlEee5b4tdygOWAQ" DatabaseType="Hive" URL="jdbc:hive2://tysonprod:10000/default;principal=hive/_HOST@HDPPROD.TYSON.COM" Port="10000" Username="" ServerName="tysonprod" SID="default" DbmsId="hive_id" ProductId="HIVE">
+  <parameters xmi:id="_28JDkWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_USE_YARN" value="true"/>
+  <parameters xmi:id="_28JDkmJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_RESOURCEMANAGER_SCHEDULER_ADDRESS" value="whqlhdpm010.tyson.com:8030"/>
+  <parameters xmi:id="_28JDk2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_USEKEYTAB" value="true"/>
+  <parameters xmi:id="_28JDlGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_USE_CUSTOM_CONFS" value="true"/>
+  <parameters xmi:id="_28JDlWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_NAME_NODE_URL" value="hdfs://tysonprod"/>
+  <parameters xmi:id="_28JDlmJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_USERNAME" value=""/>
+  <parameters xmi:id="_28JDl2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" value="_rs2ykGJjEee5b4tdygOWAQ"/>
+  <parameters xmi:id="_28JDmGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_JOB_HISTORY_PRINCIPAL" value="jhs/_HOST@HDPPROD.TYSON.COM"/>
+  <parameters xmi:id="_28JDmWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HBASE_VERSION" value="HDP_2_6"/>
+  <parameters xmi:id="_28JDmmJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_JOB_TRACKER_URL" value="whqlhdpm010.tyson.com:8032"/>
+  <parameters xmi:id="_28JDm2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_JOBHISTORY_ADDRESS" value="whqlhdpm012.tyson.com:10020"/>
+  <parameters xmi:id="_28JDnGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HIVE_VERSION" value="HDP_2_6"/>
+  <parameters xmi:id="_28JDnWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_USE_DATANODE_HOSTNAME" value="true"/>
+  <parameters xmi:id="_28JDnmJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_DB_SERVER" value="tysonprod"/>
+  <parameters xmi:id="_28JDn2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_DB_TYPE" value="Hive"/>
+  <parameters xmi:id="_28JDoGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_MAPRDB_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+  <parameters xmi:id="_28JDoWJlEee5b4tdygOWAQ" key="HIVE_AUTHENTICATION_HIVEPRINCIPLA" value="hive/_HOST@HDPPROD.TYSON.COM"/>
+  <parameters xmi:id="_28JDomJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_JOB_TRACKER_PRINCIPAL" value="rm/_HOST@HDPPROD.TYSON.COM"/>
+  <parameters xmi:id="_28JDo2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HIVE_DISTRIBUTION" value="HORTONWORKS"/>
+  <parameters xmi:id="_28JDpGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_MAPRDB_VERSION" value="HDP_2_6"/>
+  <parameters xmi:id="_28JDpWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_KEYTAB_PRINCIPLA" value="svc-talend@TYSON.COM"/>
+  <parameters xmi:id="_28JDpmJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_MAPRDB_DISTRIBUTION" value="HORTONWORKS"/>
+  <parameters xmi:id="_28JDp2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_USE_KRB" value="true"/>
+  <parameters xmi:id="_28JDqGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HBASE_DISTRIBUTION" value="HORTONWORKS"/>
+  <parameters xmi:id="_28JDqWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_STAGING_DIRECTORY" value="/user"/>
+  <parameters xmi:id="_28JDqmJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_NAME_NODE_PRINCIPAL" value="nn/_HOST@HDPPROD.TYSON.COM"/>
+  <parameters xmi:id="_28JDq2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_DB_PRODUCT" value="HIVE"/>
+  <parameters xmi:id="_28JDrGJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_KEYTAB" value="/home/svc-talend/svc-talend.keytab"/>
+  <parameters xmi:id="_28JDrWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+  <parameters xmi:id="_28JDrmJlEee5b4tdygOWAQ" key="HIVE_AUTHENTICATION_METASTOREURL" value="thrift://whqlhdpm014.tyson.com:9083"/>
+  <parameters xmi:id="_28JDr2JlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HBASE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+  <parameters xmi:id="_28JDsGJlEee5b4tdygOWAQ" key="HIVE_SERVER_VERSION" value="HIVE2"/>
+  <parameters xmi:id="_28JDsWJlEee5b4tdygOWAQ" key="CONN_PARA_KEY_HIVE_MODE" value="STANDALONE"/>
+  <parameters xmi:id="_MT9VsGJmEee5b4tdygOWAQ" key="CONN_PARA_KEY_HADOOP_CUSTOM_JARS"/>
+</TalendMetadata:DatabaseConnection>
