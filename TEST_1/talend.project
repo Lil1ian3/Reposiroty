@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_YKzSYHWiEeeWToIGc0lOjw" label="test_1" description="" language="java" technicalLabel="TEST_1" creationDate="2017-07-28T14:25:56.798+0800" author="_YKzSYXWiEeeWToIGc0lOjw" referencedProjects="_YKzSYnWiEeeWToIGc0lOjw" productVersion="Talend Data Fabric-6.5.0.20170724_1932-SNAPSHOT" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/Lil1ian3/Reposiroty&quot;,&quot;login&quot;:&quot;lemonloveorange@gmail.com&quot;,&quot;passwd&quot;:&quot;DpubI7LjlBKK2Y7U+EAvsQ==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_YKzSYHWiEeeWToIGc0lOjw" label="test_1" description="" language="java" technicalLabel="TEST_1" creationDate="2017-07-28T14:25:56.798+0800" author="_YKzSYXWiEeeWToIGc0lOjw" productVersion="Talend Data Fabric-6.5.0.20170725_1102-M1" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/Lil1ian3/Reposiroty.git&quot;,&quot;login&quot;:&quot;lemonloveorange@gmail.com&quot;,&quot;passwd&quot;:&quot;DpubI7LjlBKK2Y7U+EAvsQ==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="MDM" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_ZrZicHWiEeeWToIGc0lOjw" label="development" code="DEV"/>
     <technicalStatus xmi:id="_ZrZicXWiEeeWToIGc0lOjw" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_ZrZicnWiEeeWToIGc0lOjw" label="production" code="PROD"/>
@@ -454,8 +454,5 @@
     <migrationTask xmi:id="_aKZzvHWiEeeWToIGc0lOjw" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_YKzSYXWiEeeWToIGc0lOjw" login="admin@company.com" firstName="ll" lastName="ll" type="DQ" additionnalData="{}"/>
-  <TalendProperties:ProjectReference xmi:id="_YKzSYnWiEeeWToIGc0lOjw" project="_YKzSYHWiEeeWToIGc0lOjw" branch="master" referencedBranch="master">
-    <referencedProject href="../TEST_2/talend.project#projectReference"/>
-  </TalendProperties:ProjectReference>
   <TalendProperties:User xmi:id="_ZrclwHWiEeeWToIGc0lOjw" login="security@company.com" firstName="security" lastName="security" type="MDM" additionnalData="{}"/>
 </xmi:XMI>
