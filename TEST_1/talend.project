@@ -474,7 +474,7 @@
     <migrationTask xmi:id="__Q-AUXXIEee_q9KemTkPTA" id="org.talend.mdm.workbench.serverexplorer.migration.UnifyPasswordEncryption4MDMServerDefMigrationTask" breaks="6.0.0" version="6.0.0" status="noimpact"/>
     <migrationTask xmi:id="_aKZzvHWiEeeWToIGc0lOjw" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
   </TalendProperties:Project>
-  <TalendProperties:User xmi:id="_YKzSYXWiEeeWToIGc0lOjw" login="admin@company.com" firstName="ll" lastName="ll" type="DQ" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_YKzSYXWiEeeWToIGc0lOjw" login="admin@company.com" firstName="admin" lastName="admin" type="DQ" additionnalData="{}"/>
   <TalendProperties:User xmi:id="_ZrclwHWiEeeWToIGc0lOjw" login="security@company.com" firstName="security" lastName="security" type="MDM" additionnalData="{}"/>
   <TalendProperties:ProjectReference xmi:id="_tkU2sHf9EeeqkYXdtedCNA" project="_YKzSYHWiEeeWToIGc0lOjw" branch="master" referencedBranch="master">
     <referencedProject href="../TEST_2/talend.project#projectReference"/>
