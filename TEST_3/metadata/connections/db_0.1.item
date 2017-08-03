@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_GZe-IHgZEeeR-dNKx-FA1g" name="db" id="_0-wzsHgYEeeR-dNKx-FA1g" label="db" dataPackage="_GalxYHgZEeeR-dNKx-FA1g" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://192.168.31.20:3305/tis_windows8?noDatetimeStringSync=true&amp;queryTimeout=2400&amp;useUnicode=true&amp;characterEncoding=utf8" dbVersionString="MYSQL_5" Port="3305" Username="root" Password="AR/4XznLs5KPG+knjKpL2A==" ServerName="192.168.31.20" DatasourceName="" FileFieldName="" SID="tis_windows8" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true&amp;queryTimeout=2400&amp;useUnicode=true&amp;characterEncoding=utf8" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_GZe-IXgZEeeR-dNKx-FA1g" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_GZ7qEHgZEeeR-dNKx-FA1g" tag="package filter" value=""/>
+    <taggedValue xmi:id="_GZ7qEXgZEeeR-dNKx-FA1g" tag="Status" value=""/>
+    <taggedValue xmi:id="_GZ7qEngZEeeR-dNKx-FA1g" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GZ7qE3gZEeeR-dNKx-FA1g" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_GZ7qFHgZEeeR-dNKx-FA1g" tag="Description" value=""/>
+    <taggedValue xmi:id="_GZ7qFXgZEeeR-dNKx-FA1g" tag="Author" value=""/>
+    <taggedValue xmi:id="_GZ7qFngZEeeR-dNKx-FA1g" tag="otherParameter"/>
+    <taggedValue xmi:id="_GaJFcHgZEeeR-dNKx-FA1g" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_GaJFcXgZEeeR-dNKx-FA1g" tag="DB ProductVersion" value="5.7.12"/>
+    <taggedValue xmi:id="_GaJFcngZEeeR-dNKx-FA1g" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_GZe-IngZEeeR-dNKx-FA1g" key="CONN_PARA_KEY_USERNAME" value="root"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_GalxYHgZEeeR-dNKx-FA1g" name="tis_windows8" dataManager="_GZe-IHgZEeeR-dNKx-FA1g"/>
+</xmi:XMI>
