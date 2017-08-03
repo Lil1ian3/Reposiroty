@@ -27,9 +27,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
 /**
  * created by talend on 2016-04-08 Detailled comment.
  *
@@ -48,9 +45,8 @@ public class DataMasking {
 
     static final Random random = new Random();
 
-    static final BASE64Encoder b64Encoder = new BASE64Encoder();
-
-    static final BASE64Decoder b64Dencoder = new BASE64Decoder();
+    // TDQ-14095: BASE64Decoder and BASE64Encoder replaced by this class
+    static final org.apache.commons.codec.binary.Base64 base64 = new org.apache.commons.codec.binary.Base64();
 
     /**
      * createMD2: Calculate MD2 hash value from String.
@@ -259,9 +255,7 @@ public class DataMasking {
             Cipher cipher = Cipher.getInstance(ALGO);
             cipher.init(Cipher.ENCRYPT_MODE, key);
             byte[] encVal = cipher.doFinal(encryptString.getBytes());
-            String encryptedValue = b64Encoder.encode(encVal);
-            return encryptedValue;
-
+            return base64.encodeToString(encVal);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage(), e);
         }
@@ -285,7 +279,7 @@ public class DataMasking {
      */
 
     public static String decryptAES(String encryptedString, byte[] keyValue) {
-        
+
         if (encryptedString == null || keyValue == null) {
             return NULL_PARAMETER_MESSAGE;
         }
@@ -297,11 +291,10 @@ public class DataMasking {
             Key key = new SecretKeySpec(keyValue, ALGO);
             Cipher cipher = Cipher.getInstance(ALGO);
             cipher.init(Cipher.DECRYPT_MODE, key);
-            byte[] decordedValue = b64Dencoder.decodeBuffer(encryptedString);
+            byte[] decordedValue = base64.decode(encryptedString);
             byte[] decValue = cipher.doFinal(decordedValue);
             String decryptedValue = new String(decValue);
             return decryptedValue;
-
 
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage(), e);
@@ -326,30 +319,27 @@ public class DataMasking {
      */
 
     public static String encryptDES(String unencryptedString, String myEncryptionKey) {
-       
-            if (unencryptedString == null || myEncryptionKey == null) {
-                return NULL_PARAMETER_MESSAGE;
-            }
-            if (unencryptedString.length() == 0) {
-                return EMPTY_PARAMETER_MESSAGE;
-            } 
-            try {
-                String encryptedString = null;
 
-                String myEncryptionScheme = DES_ENCRYPTION_SCHEME;
-                byte[] keyAsBytes = myEncryptionKey.getBytes(UNICODE_FORMAT);
-                KeySpec myKeySpec = new DESKeySpec(keyAsBytes);
-                SecretKeyFactory mySecretKeyFactory = SecretKeyFactory.getInstance(myEncryptionScheme);
-                Cipher encipher = Cipher.getInstance(myEncryptionScheme);
-                SecretKey key = mySecretKeyFactory.generateSecret(myKeySpec);
+        if (unencryptedString == null || myEncryptionKey == null) {
+            return NULL_PARAMETER_MESSAGE;
+        }
+        if (unencryptedString.length() == 0) {
+            return EMPTY_PARAMETER_MESSAGE;
+        }
+        try {
+            String encryptedString = null;
 
-                encipher.init(Cipher.ENCRYPT_MODE, key);
-                byte[] plainText = unencryptedString.getBytes(UNICODE_FORMAT);
-                byte[] encryptedText = encipher.doFinal(plainText);
-                encryptedString = b64Encoder.encode(encryptedText);
+            String myEncryptionScheme = DES_ENCRYPTION_SCHEME;
+            byte[] keyAsBytes = myEncryptionKey.getBytes(UNICODE_FORMAT);
+            KeySpec myKeySpec = new DESKeySpec(keyAsBytes);
+            SecretKeyFactory mySecretKeyFactory = SecretKeyFactory.getInstance(myEncryptionScheme);
+            Cipher encipher = Cipher.getInstance(myEncryptionScheme);
+            SecretKey key = mySecretKeyFactory.generateSecret(myKeySpec);
 
-                return encryptedString;
-
+            encipher.init(Cipher.ENCRYPT_MODE, key);
+            byte[] plainText = unencryptedString.getBytes(UNICODE_FORMAT);
+            byte[] encryptedText = encipher.doFinal(plainText);
+            return base64.encodeToString(encryptedText);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
@@ -394,7 +384,7 @@ public class DataMasking {
             SecretKey key = mySecretKeyFactory.generateSecret(myKeySpec);
 
             decipher.init(Cipher.DECRYPT_MODE, key);
-            byte[] encryptedText = b64Dencoder.decodeBuffer(encryptedString);
+            byte[] encryptedText = base64.decode(encryptedString);
             byte[] plainText = decipher.doFinal(encryptedText);
 
             StringBuffer stringBuffer = new StringBuffer();
