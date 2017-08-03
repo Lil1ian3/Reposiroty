@@ -7,3 +7,7 @@
  * Task [UnifyPasswordEncryption4MDMServerDefMigrationTask] : Nothing to do
  * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
  ---=== End of migration ===---
+ * Task [Fix a problem of project resources linked to items] : Applied successfully
+ * Task [Configure the new INCLUDTRASHFILES property to 'true' in order to keep the same behavior as before] : Applied successfully
+ * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
+ ---=== End of migration ===---

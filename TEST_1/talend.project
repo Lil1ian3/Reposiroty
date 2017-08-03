@@ -49,6 +49,45 @@
         <elementParameter xmi:id="_u_lnBXWkEee87Lfktva52w" field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value="" contextMode="false"/>
       </parameters>
     </statAndLogsSettings>
+    <ItemsRelations xmi:id="_GRd6gHgtEeebi5geueP9CA">
+      <baseItem xmi:id="_GRd6gXgtEeebi5geueP9CA" id="_qD8zUHgVEeeAz6KOWtbNfQ" version="0.1" type="job"/>
+      <relatedItems xmi:id="_GRd6gngtEeebi5geueP9CA" id="_NKHhQHgVEeeemfaxxuRAFA" version="Latest" type="context"/>
+      <relatedItems xmi:id="_GRd6g3gtEeebi5geueP9CA" id="_0-wzsHgYEeeR-dNKx-FA1g" version="Latest" type="property"/>
+      <relatedItems xmi:id="_GRd6hHgtEeebi5geueP9CA" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6hXgtEeebi5geueP9CA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6hngtEeebi5geueP9CA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6h3gtEeebi5geueP9CA" id="DataMasking" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6iHgtEeebi5geueP9CA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6iXgtEeebi5geueP9CA" id="DqStringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6ingtEeebi5geueP9CA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6i3gtEeebi5geueP9CA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6jHgtEeebi5geueP9CA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6jXgtEeebi5geueP9CA" id="DataQuality" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6jngtEeebi5geueP9CA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6j3gtEeebi5geueP9CA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6kHgtEeebi5geueP9CA" id="DQTechnical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6kXgtEeebi5geueP9CA" id="DataQualityDependencies" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6kngtEeebi5geueP9CA" id="MDM" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6k3gtEeebi5geueP9CA" id="TalendStringUtil" version="Latest" type="routine"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_GRd6lHgtEeebi5geueP9CA">
+      <baseItem xmi:id="_GRd6lXgtEeebi5geueP9CA" id="_74uucHWiEeeWToIGc0lOjw" version="0.1" type="job"/>
+      <relatedItems xmi:id="_GRd6lngtEeebi5geueP9CA" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6l3gtEeebi5geueP9CA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6mHgtEeebi5geueP9CA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6mXgtEeebi5geueP9CA" id="DataMasking" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6mngtEeebi5geueP9CA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6m3gtEeebi5geueP9CA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6nHgtEeebi5geueP9CA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6nXgtEeebi5geueP9CA" id="DqStringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6nngtEeebi5geueP9CA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6n3gtEeebi5geueP9CA" id="DataQuality" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6oHgtEeebi5geueP9CA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6oXgtEeebi5geueP9CA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6ongtEeebi5geueP9CA" id="DQTechnical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6o3gtEeebi5geueP9CA" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_GRd6pHgtEeebi5geueP9CA" id="DataQualityDependencies" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_ZEsHwHWiEeeWToIGc0lOjw" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_ZEsHwXWiEeeWToIGc0lOjw" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_ZEsHwnWiEeeWToIGc0lOjw" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
@@ -431,8 +470,9 @@
     <migrationTask xmi:id="_-xXTMXXIEee_q9KemTkPTA" id="org.talend.mdm.repository.core.migrate.UpdateProcessObjectPathMT" breaks="5.1.1" version="5.1.2" status="ok"/>
     <migrationTask xmi:id="_-xXTMnXIEee_q9KemTkPTA" id="org.talend.mdm.repository.core.migrate.RemoveRefNameMT" breaks="6.0.0" version="6.0.0" status="noimpact"/>
     <migrationTask xmi:id="_-xXTM3XIEee_q9KemTkPTA" id="org.talend.mdm.repository.core.migrate.UpdateOperatorMigrationTask" breaks="6.2.0" version="6.2.0" status="ok"/>
-    <migrationTask xmi:id="__Q-AUHXIEee_q9KemTkPTA" id="org.talend.repository.model.migration.FixProjectResourceLink" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="__Q-AUXXIEee_q9KemTkPTA" id="org.talend.mdm.workbench.serverexplorer.migration.UnifyPasswordEncryption4MDMServerDefMigrationTask" breaks="6.0.0" version="6.0.0" status="noimpact"/>
+    <migrationTask xmi:id="__Q-AUHXIEee_q9KemTkPTA" id="org.talend.repository.model.migration.FixProjectResourceLink" breaks="5.1.1" version="5.1.2" status="noimpact"/>
+    <migrationTask xmi:id="_GROp8HgtEeebi5geueP9CA" id="org.talend.repository.model.migration.AddIncludTrashFilesOnGoogleDriveListTask" breaks="6.5.0" version="6.5.1" status="ok"/>
     <migrationTask xmi:id="_aKZzvHWiEeeWToIGc0lOjw" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_YKzSYXWiEeeWToIGc0lOjw" login="admin@company.com" firstName="admin" lastName="admin" type="DQ" additionnalData="{}"/>
