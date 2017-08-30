@@ -7,6 +7,32 @@
     <documentationStatus xmi:id="_oEio8I1hEeeWyuov0D2a1w" label="unchecked" code="UCK"/>
     <documentationStatus xmi:id="_oEio8Y1hEeeWyuov0D2a1w" label="checked" code="CHK"/>
     <documentationStatus xmi:id="_oEio8o1hEeeWyuov0D2a1w" label="validated" code="VAL"/>
+    <ItemsRelations xmi:id="_bkAEEI1iEee3-vnPO6mbMA">
+      <baseItem xmi:id="_bkAEEY1iEee3-vnPO6mbMA" id="_B2XaQPkPEea016_Ol9soHg" version="0.1" type="joblet"/>
+      <relatedItems xmi:id="_bkAEEo1iEee3-vnPO6mbMA" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEE41iEee3-vnPO6mbMA" id="IOTools" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEFI1iEee3-vnPO6mbMA" id="KeyVal" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEFY1iEee3-vnPO6mbMA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEFo1iEee3-vnPO6mbMA" id="Template" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEF41iEee3-vnPO6mbMA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEGI1iEee3-vnPO6mbMA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEGY1iEee3-vnPO6mbMA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEGo1iEee3-vnPO6mbMA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEG41iEee3-vnPO6mbMA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEHI1iEee3-vnPO6mbMA" id="MapTool" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEHY1iEee3-vnPO6mbMA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEHo1iEee3-vnPO6mbMA" id="DateTool" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEH41iEee3-vnPO6mbMA" id="Logger" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEII1iEee3-vnPO6mbMA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEIY1iEee3-vnPO6mbMA" id="Base64" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEIo1iEee3-vnPO6mbMA" id="SecTools" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEI41iEee3-vnPO6mbMA" id="TemplateSyntaxException" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEJI1iEee3-vnPO6mbMA" id="NumberTool" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkAEJY1iEee3-vnPO6mbMA" id="StringTool" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkArII1iEee3-vnPO6mbMA" id="TemplateElementRequestWithExpandAccess" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkArIY1iEee3-vnPO6mbMA" id="DateToolException" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_bkArIo1iEee3-vnPO6mbMA" id="TemplateElementRequest" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_oC97oI1hEeeWyuov0D2a1w" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_oC97oY1hEeeWyuov0D2a1w" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_oC97oo1hEeeWyuov0D2a1w" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="ok"/>
