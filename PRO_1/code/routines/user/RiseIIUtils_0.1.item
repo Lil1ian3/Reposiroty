@@ -12,7 +12,7 @@
 // ============================================================================
 package routines;
 
-import java.io.File;
+//import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import java.io.*;
 import java.nio.channels.*;
 
 import routines.system.StringUtils;
-import com.informix.util.stringUtil;
+//import com.informix.util.stringUtil;
 
 /*
  * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
@@ -84,14 +84,14 @@ public class RiseIIUtils {
 		    
 	}
 	/**
-     * DeleteFile: Löschen der Datei
+     * DeleteFile: Lï¿½schen der Datei
      * 
      * 
      * {talendTypes} Boolean
      * 
      * {Category} RiseII Utils
      * 
-     * {param} string("") delFile: Zu löschende Datei.
+     * {param} string("") delFile: Zu lï¿½schende Datei.
      * 
      * {example} DeleteFile("input.txt") result: true
      */
@@ -100,14 +100,14 @@ public class RiseIIUtils {
 	    return deletedFile.delete();   
 	}
 	/**
-     * FileExists: Existenz der Datei prüfen
+     * FileExists: Existenz der Datei prï¿½fen
      * 
      * 
      * {talendTypes} Boolean
      * 
      * {Category} RiseII Utils
      * 
-     * {param} string("") exFile: Zu prüfende Datei.
+     * {param} string("") exFile: Zu prï¿½fende Datei.
      * 
      * {example} FileExists("input.txt") result: true
      */
@@ -147,7 +147,7 @@ public class RiseIIUtils {
      * 
      * {param} string("") FileFrom: Zu verschiebende Datei.
      * {param} string("") FileTo: 	Zielname der Datei.
-     * {param} string("") deletingFile: Zu verschiebende Datei in Quellverzeichnis nach der Aktion zu löschen.
+     * {param} string("") deletingFile: Zu verschiebende Datei in Quellverzeichnis nach der Aktion zu lï¿½schen.
      *
      * {example} MoveFile("input.txt","output.txt","J") result: true
      */
@@ -163,7 +163,7 @@ public class RiseIIUtils {
 		return DeleteFile(FileFrom);   
 	}
 	/**
-     * concatNames: String-Zeilen zusammenführen
+     * concatNames: String-Zeilen zusammenfï¿½hren
      * 
      * 
      * {talendTypes} String
@@ -211,7 +211,7 @@ public class RiseIIUtils {
 		return retVal;
 	}
 	/**
-     * removeLegalFormInName: Rechtsform aus dem Namen löschen
+     * removeLegalFormInName: Rechtsform aus dem Namen lï¿½schen
      * 
      * 
      * {talendTypes} String
