@@ -1,0 +1,328 @@
+// ============================================================================
+//
+// Copyright (C) 2006-2010 Talend Inc. - www.talend.com
+//
+// This source code is available under agreement available at
+// %InstallDIR%\features\org.talend.rcp.branding.%PRODUCTNAME%\%PRODUCTNAME%license.txt
+//
+// You should have received a copy of the agreement
+// along with this program; if not, write to Talend SA
+// 9 rue Pages 92150 Suresnes, France
+//
+// ============================================================================
+package routines;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+import java.io.*;
+import java.nio.channels.*;
+
+import routines.system.StringUtils;
+import com.informix.util.stringUtil;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class RiseIIUtils {
+
+	/**
+     * CopyFile: Kopieren der Datei
+     * 
+     * 
+     * {talendTypes}
+     * 
+     * {Category} RiseII Utils
+     * 
+     * {param} string("") inputFile: Zu kopierende Datei.
+     * 
+     * {param} string("") outputFile: Ziel-Datei.
+     * 
+     * {example} CopyFile("input.txt","output.txt") result: 
+     */
+	public static void CopyFile (String inputFile,String outputFile, String deletingFile) {
+		    try {
+		    	if ((RiseIIUtils.FileExists (outputFile))&&("J".equals(deletingFile)))
+		    	  if (!RiseIIUtils.DeleteFile (outputFile))
+		    	     throw new IOException(outputFile+": konnte nicht deleted werden");
+		    	
+		    			File inFile = new File(inputFile);
+					    File outFile = new File(outputFile);
+					    
+					    FileReader in = new FileReader(inFile);
+					    FileWriter out = new FileWriter(outFile);
+					    int c;
+			
+					    while ((c = in.read()) != -1)
+					      out.write(c);
+			
+					    in.close();
+					    out.close();
+		    	
+		    } catch(IOException e) {	
+
+				throw new RuntimeException(inputFile+":"+e.getMessage());
+			
+			}
+		    
+	}
+	/**
+     * DeleteFile: Löschen der Datei
+     * 
+     * 
+     * {talendTypes} Boolean
+     * 
+     * {Category} RiseII Utils
+     * 
+     * {param} string("") delFile: Zu löschende Datei.
+     * 
+     * {example} DeleteFile("input.txt") result: true
+     */
+	public static boolean DeleteFile (String delFile) {
+	    File deletedFile = new File(delFile);
+	    return deletedFile.delete();   
+	}
+	/**
+     * FileExists: Existenz der Datei prüfen
+     * 
+     * 
+     * {talendTypes} Boolean
+     * 
+     * {Category} RiseII Utils
+     * 
+     * {param} string("") exFile: Zu prüfende Datei.
+     * 
+     * {example} FileExists("input.txt") result: true
+     */
+	public static boolean FileExists (String exFile) {
+		File existingFile = new File(exFile);
+		return existingFile.exists();   
+	}
+	/**
+     * RenameToFile: Verschieben der Datei
+     * 
+     * 
+     * {talendTypes} Boolean
+     * 
+     * {Category} RiseII Utils
+     * 
+     * {param} string("") FileFrom: Zu verschiebende Datei.
+     * {param} string("") FileTo: 	Zielname der Datei.
+     *
+     * {example} RenameToFile("input.txt","output.txt") result: true
+     */
+	public static boolean RenameToFile (String FileFrom, String FileTo, String deletingFile) {
+		if ((RiseIIUtils.FileExists (FileTo))&&("J".equals(deletingFile)))
+	    	  if (!RiseIIUtils.DeleteFile (FileTo))
+	    		  return false;
+		
+		File File1 = new File(FileFrom);
+		File File2 = new File(FileTo);
+		return File1.renameTo(File2);   
+	}
+	/**
+     * MoveFile: Verschieben der Datei
+     * 
+     * 
+     * {talendTypes} Boolean
+     * 
+     * {Category} RiseII Utils
+     * 
+     * {param} string("") FileFrom: Zu verschiebende Datei.
+     * {param} string("") FileTo: 	Zielname der Datei.
+     * {param} string("") deletingFile: Zu verschiebende Datei in Quellverzeichnis nach der Aktion zu löschen.
+     *
+     * {example} MoveFile("input.txt","output.txt","J") result: true
+     */
+	public static boolean MoveFile (String FileFrom, String FileTo, String deletingFile) {
+		try {
+			CopyFile (FileFrom,FileTo, deletingFile);
+		} catch(Exception e) {	
+
+			return false;
+		
+		}
+		
+		return DeleteFile(FileFrom);   
+	}
+	/**
+     * concatNames: String-Zeilen zusammenführen
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} RiseII PostDirect Utils
+     * 
+     * {param} string("") Name1: Parameter 1.
+     * {param} string("") Name2: Parameter 2.
+     * {param} string("") Name3: Parameter 3.
+     * {param} string("") Name4: Parameter 4.
+     *
+     * {example} concatNames("example ","input.txt") result: example input.txt
+     */
+	public static String concatNames (String Name1,  String Name2, String Name3, String Name4) {
+		String retVal ="";
+		StringBuilder nameSB = new StringBuilder();
+
+        if (Name1 != null)
+        {
+            nameSB.append(Name1);
+        }
+
+        if (Name2 != null)
+        {
+            nameSB.append(" ");
+            nameSB.append(Name2);
+        }
+        
+        if (Name3 != null)
+        {
+            nameSB.append(" ");
+            nameSB.append(Name3);
+        }
+
+        if (Name4 != null)
+        {
+            nameSB.append(" ");
+            nameSB.append(Name4);
+        }        
+        
+        if (nameSB.toString()!=null){
+        	retVal = nameSB.toString();
+        }
+        
+		return retVal;
+	}
+	/**
+     * removeLegalFormInName: Rechtsform aus dem Namen löschen
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} RiseII PostDirect Utils
+     * 
+     * {param} string("")  Name: Name.
+     * {param} string("") LegalForms: Die Liste von Rechtsformen.
+     * {param} string("") ListSeparator: Feldseparator in der Liste von Rechtsformen.
+     *
+     * {example} concatNames("Test AG","AG|e.K","|") result: Test
+     */
+	public static String removeLegalFormInName (String Name, String LegalForms, String ListSeparator) {
+		
+		try {
+				String retVal = "";
+				
+				String NameInUpperCase = Name.toUpperCase();
+				
+				String[] LegalFormsArr = StringUtils.split(LegalForms,ListSeparator);
+				List list = Arrays.asList(LegalFormsArr);
+				Iterator iterator = list.iterator();
+				
+				while(iterator.hasNext()){
+			
+			
+				String LegalForm = (String) iterator.next();
+				
+				int index = NameInUpperCase.indexOf(LegalForm);
+
+			    do                
+			    {
+			    	if(index >= 0)
+			        {
+			    		// check for preceding space
+			            if(index > 0)
+			            {
+			            	if(NameInUpperCase.charAt(index-1) != ' ' && NameInUpperCase.charAt(index-1) != '-')
+			                	{
+			                    // This legal form is not part of the name
+			                    continue;
+			                    }
+			            }
+			            // check for trailing space
+			            if(index + LegalForm.length() < Name.length())
+			            {
+			            	if(NameInUpperCase.charAt(index + LegalForm.length()) != ' ' && NameInUpperCase.charAt(index + LegalForm.length()) != '-')
+			                	{
+			                    // This legal form is not part of the name
+			                    continue;
+			                    }                    
+			                }
+			            
+			        	retVal = (index > 0?Name.substring(0, index-1):"") + (index + LegalForm.length() < Name.length()?Name.substring(index + LegalForm.length()):"");            			
+	                
+			            return retVal;
+			            
+			        }
+			        
+			    }
+			    while((index = NameInUpperCase.indexOf(LegalForm, index+1)) > 0);	
+			}
+			}
+			catch (Exception e)
+			{
+				return Name;   
+			}
+	    
+		
+		return Name;   
+	}
+	/**
+     * releaseLockedFile: Freigabe der von anderem Prozess gelockten Datei 
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} RiseII PostDirect Utils
+     * 
+     * {param} string("")  FileName: Datei freizugeben.
+     * 
+     * {example} concatNames("test.txt") result: false
+     */
+	public static boolean releaseLockedFile (String FileName) {
+		
+		try {
+		    // Get a file channel for the file
+		    File file = new File(FileName);
+		    FileChannel channel = new RandomAccessFile(file, "rw").getChannel();
+
+		    // Use the file channel to create a lock on the file.
+		    // This method blocks until it can retrieve the lock.
+		    FileLock lock = channel.lock();
+
+		    // Try acquiring the lock without blocking. This method returns
+		    // null or throws an exception if the file is already locked.
+		 // try {
+		 //     lock = channel.tryLock();
+		 // } catch (OverlappingFileLockException e) {
+		 //     // File is already locked in this thread or virtual machine
+		 //  }
+
+		    // Release the lock
+		    lock.release();
+
+		    // Close the file
+		    channel.close();
+		} catch (Exception e) {
+		  return false;
+		} 
+		
+		return true;
+	}
+}
