@@ -137,18 +137,6 @@
       <relatedItems xmi:id="_CNqHEY1iEeeWyuov0D2a1w" id="AzureADAuth" version="Latest" type="routine"/>
       <relatedItems xmi:id="_CNqHEo1iEeeWyuov0D2a1w" id="DATASTAGE" version="Latest" type="routine"/>
     </ItemsRelations>
-    <ItemsRelations xmi:id="_cnwDQI1mEeeHLrgBP_gk7w">
-      <baseItem xmi:id="_cnwDQY1mEeeHLrgBP_gk7w" id="_hxZTEI1lEeeHLrgBP_gk7w" version="0.1" type="job"/>
-      <relatedItems xmi:id="_cnwDQo1mEeeHLrgBP_gk7w" id="SQLike" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDQ41mEeeHLrgBP_gk7w" id="Numeric" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDRI1mEeeHLrgBP_gk7w" id="Relational" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDRY1mEeeHLrgBP_gk7w" id="TalendString" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDRo1mEeeHLrgBP_gk7w" id="DataOperation" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDR41mEeeHLrgBP_gk7w" id="StringHandling" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDSI1mEeeHLrgBP_gk7w" id="TalendDataGenerator" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDSY1mEeeHLrgBP_gk7w" id="TalendDate" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_cnwDSo1mEeeHLrgBP_gk7w" id="Mathematical" version="Latest" type="routine"/>
-    </ItemsRelations>
     <ItemsRelations xmi:id="_gQnakI4aEee3MN0e1LGTtA">
       <baseItem xmi:id="_gQnakY4aEee3MN0e1LGTtA" id="_jBmRUDCMEee45YRrfKHPQw" version="0.1" type="job"/>
       <relatedItems xmi:id="_gQnako4aEee3MN0e1LGTtA" id="SQLike" version="Latest" type="routine"/>
